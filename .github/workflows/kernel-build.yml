@@ -60,6 +60,8 @@ jobs:
         uses: ThinkerYzu1/libbpf-ci/get-linux-source@libpcap
         with:
           dest: '.kernel'
+          repo: 'https://github.com/ThinkerYzu/linux.git'
+          rev: 'bpf-next/user-kptr'
       - if: ${{ inputs.download_sources }}
         name: Move linux source in place
         shell: bash
